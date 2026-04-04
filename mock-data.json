@@ -1,0 +1,442 @@
+[
+    {
+        "id": "_4",
+        "date": "2025-06-03",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 309
+    },
+    {
+        "id": "_2",
+        "date": "2025-06-11",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 241
+    },
+    {
+        "id": "_1",
+        "date": "2025-06-16",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 4884
+    },
+    {
+        "id": "_5",
+        "date": "2025-06-17",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 77
+    },
+    {
+        "id": "_3",
+        "date": "2025-06-25",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 409
+    },
+    {
+        "id": "_8",
+        "date": "2025-07-02",
+        "description": "Miscellaneous",
+        "category": "Other",
+        "type": "expense",
+        "amount": 193
+    },
+    {
+        "id": "_7",
+        "date": "2025-07-08",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 223
+    },
+    {
+        "id": "_6",
+        "date": "2025-07-18",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3982
+    },
+    {
+        "id": "_10",
+        "date": "2025-07-24",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 503
+    },
+    {
+        "id": "_9",
+        "date": "2025-07-26",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 312
+    },
+    {
+        "id": "_12",
+        "date": "2025-08-07",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 240
+    },
+    {
+        "id": "_11",
+        "date": "2025-08-08",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3657
+    },
+    {
+        "id": "_15",
+        "date": "2025-08-11",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 223
+    },
+    {
+        "id": "_14",
+        "date": "2025-08-19",
+        "description": "Miscellaneous",
+        "category": "Other",
+        "type": "expense",
+        "amount": 100
+    },
+    {
+        "id": "_13",
+        "date": "2025-08-28",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 281
+    },
+    {
+        "id": "_18",
+        "date": "2025-09-03",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 340
+    },
+    {
+        "id": "_20",
+        "date": "2025-09-13",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 410
+    },
+    {
+        "id": "_16",
+        "date": "2025-09-14",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3652
+    },
+    {
+        "id": "_19",
+        "date": "2025-09-15",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 112
+    },
+    {
+        "id": "_17",
+        "date": "2025-09-24",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 224
+    },
+    {
+        "id": "_23",
+        "date": "2025-10-07",
+        "description": "Miscellaneous",
+        "category": "Other",
+        "type": "expense",
+        "amount": 153
+    },
+    {
+        "id": "_22",
+        "date": "2025-10-11",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 195
+    },
+    {
+        "id": "_24",
+        "date": "2025-10-13",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 502
+    },
+    {
+        "id": "_25",
+        "date": "2025-10-14",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 323
+    },
+    {
+        "id": "_21",
+        "date": "2025-10-21",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 4323
+    },
+    {
+        "id": "_27",
+        "date": "2025-11-09",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 525
+    },
+    {
+        "id": "_28",
+        "date": "2025-11-10",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 473
+    },
+    {
+        "id": "_29",
+        "date": "2025-11-15",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 432
+    },
+    {
+        "id": "_30",
+        "date": "2025-11-21",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 455
+    },
+    {
+        "id": "_26",
+        "date": "2025-11-28",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 4208
+    },
+    {
+        "id": "_33",
+        "date": "2025-12-01",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 54
+    },
+    {
+        "id": "_35",
+        "date": "2025-12-03",
+        "description": "Miscellaneous",
+        "category": "Other",
+        "type": "expense",
+        "amount": 592
+    },
+    {
+        "id": "_32",
+        "date": "2025-12-06",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 159
+    },
+    {
+        "id": "_31",
+        "date": "2025-12-07",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 4550
+    },
+    {
+        "id": "_34",
+        "date": "2025-12-19",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 491
+    },
+    {
+        "id": "_40",
+        "date": "2026-01-04",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 274
+    },
+    {
+        "id": "_37",
+        "date": "2026-01-08",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 261
+    },
+    {
+        "id": "_38",
+        "date": "2026-01-12",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 192
+    },
+    {
+        "id": "_39",
+        "date": "2026-01-17",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 447
+    },
+    {
+        "id": "_36",
+        "date": "2026-01-27",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3673
+    },
+    {
+        "id": "_43",
+        "date": "2026-02-07",
+        "description": "Miscellaneous",
+        "category": "Other",
+        "type": "expense",
+        "amount": 426
+    },
+    {
+        "id": "_44",
+        "date": "2026-02-09",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 385
+    },
+    {
+        "id": "_45",
+        "date": "2026-02-13",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 584
+    },
+    {
+        "id": "_41",
+        "date": "2026-02-16",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3544
+    },
+    {
+        "id": "_42",
+        "date": "2026-02-22",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 485
+    },
+    {
+        "id": "_48",
+        "date": "2026-03-03",
+        "description": "Rent/Mortgage",
+        "category": "Housing",
+        "type": "expense",
+        "amount": 290
+    },
+    {
+        "id": "_50",
+        "date": "2026-03-08",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 596
+    },
+    {
+        "id": "_49",
+        "date": "2026-03-11",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 581
+    },
+    {
+        "id": "_46",
+        "date": "2026-03-25",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 4049
+    },
+    {
+        "id": "_47",
+        "date": "2026-03-26",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 392
+    },
+    {
+        "id": "_54",
+        "date": "2026-04-01",
+        "description": "Internet/Electricity",
+        "category": "Utilities",
+        "type": "expense",
+        "amount": 66
+    },
+    {
+        "id": "_51",
+        "date": "2026-04-04",
+        "description": "Salary",
+        "category": "Salary",
+        "type": "income",
+        "amount": 3759
+    },
+    {
+        "id": "_53",
+        "date": "2026-04-11",
+        "description": "Groceries/Dining",
+        "category": "Food",
+        "type": "expense",
+        "amount": 425
+    },
+    {
+        "id": "_52",
+        "date": "2026-04-15",
+        "description": "Movies/Netflix",
+        "category": "Entertainment",
+        "type": "expense",
+        "amount": 312
+    },
+    {
+        "id": "_55",
+        "date": "2026-04-17",
+        "description": "Gas/Uber",
+        "category": "Transportation",
+        "type": "expense",
+        "amount": 455
+    }
+]
