@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Finance Dashboard - Zorvyn Infotech</title>
     
     <!-- Google Fonts for modern typography -->
@@ -129,11 +129,11 @@
                     </div>
                     <div class="chart-container" style="display: flex; flex-direction: column;">
                         <h3>Spending Breakdown <br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">By category this month</span></h3>
-                        <div style="display: flex; align-items: center; flex: 1;">
+                        <div class="category-chart-wrapper">
                             <div class="canvas-wrapper" style="position: relative; height: 250px; flex: 1;">
                                 <canvas id="categoryChart"></canvas>
                             </div>
-                            <div id="categoryLegend" class="custom-legend relative-legend" style="width: max-content; min-width: 150px; padding-left: 1rem;"></div>
+                            <div id="categoryLegend" class="custom-legend relative-legend"></div>
                         </div>
                     </div>
                 </section>
@@ -303,7 +303,7 @@
             <!-- Insights View -->
             <!-- ============================== -->
             <div id="insights" class="view-section hidden">
-                <section class="summary-cards" style="grid-template-columns: 1fr 1fr 1fr;">
+                <section class="summary-cards three-cols">
                     <div class="card">
                         <div class="card-header">
                             <h3 style="text-transform: uppercase; font-size: 0.75rem; font-weight: 600; color: var(--danger); letter-spacing: 1px;"><span style="margin-right: 4px;">🔥</span>TOP SPENDING</h3>
@@ -343,7 +343,7 @@
                         <p id="monthTxnCount" style="font-size: 0.8rem; color: var(--text-muted);">0 this month</p>
                     </div>
                 </section>
-                <section class="charts-section" style="grid-template-columns: 1fr;">
+                <section class="charts-section">
                     <div class="chart-container">
                         <h3>Monthly Income vs Expenses<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Last 6 months comparison</span></h3>
                         <div class="canvas-wrapper" style="height: 350px;">

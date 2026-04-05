@@ -179,7 +179,7 @@ function setupEventListeners() {
             switchTab(targetId, link);
             
             // Close sidebar on mobile after clicking a link
-            if (window.innerWidth <= 768 && els.sidebar && els.sidebar.classList.contains('open')) {
+            if (els.sidebar && els.sidebar.classList.contains('open')) {
                 els.sidebar.classList.remove('open');
             }
         });
@@ -191,9 +191,9 @@ function setupEventListeners() {
             els.sidebar.classList.toggle('open');
         });
         
-        // Close sidebar when clicking outside on mobile
+        // Close sidebar when clicking outside
         document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768 && els.sidebar.classList.contains('open')) {
+            if (els.sidebar.classList.contains('open')) {
                 if (!els.sidebar.contains(e.target) && !els.mobileMenuBtn.contains(e.target)) {
                     els.sidebar.classList.remove('open');
                 }
@@ -808,7 +808,7 @@ function renderTransactionsList() {
             let actionHtml = '';
             if (currentRole === 'admin') {
                 actionHtml = `
-                    <td class="action-col admin-only">
+                    <td class="action-col admin-only" data-label="ACTION">
                         <div class="txn-actions">
                             <button class="action-btn" onclick="editTransaction('${txn.id}')" title="Edit">
                                 <span class="material-symbols-rounded" style="font-size:18px;">edit</span>
@@ -819,15 +819,15 @@ function renderTransactionsList() {
                         </div>
                     </td>`;
             } else {
-                actionHtml = `<td class="action-col admin-only hidden"></td>`;
+                actionHtml = `<td class="action-col admin-only hidden" data-label="ACTION"></td>`;
             }
 
             tr.innerHTML = `
-                <td>${rowDate}</td>
-                <td><strong>${txn.description}</strong></td>
-                <td>${txn.category}</td>
-                <td><span class="badge badge-${txn.type}">${txn.type.charAt(0).toUpperCase() + txn.type.slice(1)}</span></td>
-                <td class="amount-col" style="color: var(--${amountClass})">${amountPrefix}${amountDisp}</td>
+                <td data-label="DESCRIPTION"><strong>${txn.description}</strong></td>
+                <td data-label="DATE">${rowDate}</td>
+                <td data-label="CATEGORY">${txn.category}</td>
+                <td data-label="TYPE"><span class="badge badge-${txn.type}">${txn.type.charAt(0).toUpperCase() + txn.type.slice(1)}</span></td>
+                <td class="amount-col" data-label="AMOUNT" style="color: var(--${amountClass})">${amountPrefix}${amountDisp}</td>
                 ${actionHtml}
             `;
             els.tableBody.appendChild(tr);
