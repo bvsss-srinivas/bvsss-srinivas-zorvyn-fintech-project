@@ -811,10 +811,10 @@ function renderTransactionsList() {
                     <td class="action-col admin-only" data-label="ACTION">
                         <div class="txn-actions">
                             <button class="action-btn" onclick="editTransaction('${txn.id}')" title="Edit">
-                                <span class="material-symbols-rounded" style="font-size:18px;">edit</span>
+                                <span class="material-symbols-rounded" style="font-size:22px;">edit</span>
                             </button>
                             <button class="action-btn delete" onclick="deleteTransaction('${txn.id}')" title="Delete">
-                                <span class="material-symbols-rounded" style="font-size:18px;">delete</span>
+                                <span class="material-symbols-rounded" style="font-size:22px;">delete</span>
                             </button>
                         </div>
                     </td>`;
@@ -1161,7 +1161,7 @@ function updateCharts() {
                 tooltip: { backgroundColor: isDark ? '#1e293b' : '#fff', titleColor: isDark ? '#cbd5e1' : '#0f172a', bodyColor: isDark ? '#cbd5e1' : '#64748b', borderColor: gridColor, borderWidth: 1 }
             },
             scales: {
-                x: { grid: { display: false } },
+                x: { grid: { display: false }, ticks: { maxTicksLimit: 4, autoSkip: true, maxRotation: 0 } },
                 y: { grid: { color: gridColor }, border: { dash: [4, 4], display: false } }
             }
         }
@@ -1276,7 +1276,7 @@ function updateCharts() {
                     legend: { position: 'top', align: 'start', labels: { usePointStyle: true, boxWidth: 8, padding: 20 } }
                 },
                 scales: {
-                    x: { grid: { display: false } },
+                    x: { grid: { display: false }, ticks: { maxTicksLimit: 4, autoSkip: true, maxRotation: 0 } },
                     y: { grid: { color: gridColor }, border: { display: false } }
                 }
             }
