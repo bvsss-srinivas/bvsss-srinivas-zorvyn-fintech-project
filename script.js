@@ -995,38 +995,77 @@ if(importCsvInput) {
     importCsvInput.addEventListener('change', function(e) {
         if (currentRole === 'viewer') {
             showToast('Viewer accounts cannot import data.', 'error');
+            e.target.value = ''; // Reset
             return;
         }
         const file = e.target.files[0];
         if(!file) return;
         const reader = new FileReader();
         reader.onload = function(evt) {
-            const lines = evt.target.result.split('\n');
-            if(lines.length < 2) return; 
+            const lines = evt.target.result.split(/\r?\n/);
+            if(lines.length < 2) {
+                showToast('File is empty or invalid format.', 'error');
+                e.target.value = '';
+                return; 
+            }
+            
+            function parseCSVRow(str) {
+                const result = [];
+                let insideQuote = false;
+                let currentWord = '';
+                for (let i = 0; i < str.length; i++) {
+                    const char = str[i];
+                    if (char === '"') {
+                        insideQuote = !insideQuote;
+                    } else if (char === ',' && !insideQuote) {
+                        result.push(currentWord.trim());
+                        currentWord = '';
+                    } else {
+                        currentWord += char;
+                    }
+                }
+                result.push(currentWord.trim());
+                return result;
+            }
             
             let importedCount = 0;
+            // Map existing IDs for quick deduplication
+            const existingIds = new Set(transactions.map(t => t.id));
+            
             for(let i=1; i<lines.length; i++) {
-                const row = lines[i].split(',');
+                const line = lines[i].trim();
+                if(!line) continue;
+                
+                const row = parseCSVRow(line);
                 if(row.length >= 6) {
-                    const id = generateId(); 
-                    const date = row[1].trim();
-                    const desc = row[2].replace(/"/g, '').trim(); 
-                    const cat = row[3].trim();
-                    const type = row[4].trim().toLowerCase();
+                    const existingId = row[0];
+                    const date = row[1];
+                    const desc = row[2];
+                    const cat = row[3];
+                    const type = row[4].toLowerCase();
                     const amt = parseFloat(row[5]);
                     
                     if(date && desc && !isNaN(amt)) {
-                        transactions.push({ id, date, description: desc, category: cat, type, amount: amt });
-                        importedCount++;
+                        if (!existingIds.has(existingId)) {
+                            // Only add if it doesn't already exist to prevent mass duplication
+                            const id = existingId && existingId.startsWith('txn_') ? existingId : generateId();
+                            transactions.push({ id, date, description: desc, category: cat, type, amount: amt });
+                            existingIds.add(id);
+                            importedCount++;
+                        }
                     }
                 }
             }
+            
             if(importedCount > 0) {
                 transactions.sort((a,b) => new Date(a.date) - new Date(b.date));
                 saveData();
                 updateDashboard();
-                showToast(`Successfully imported ${importedCount} transactions.`, 'success');
+                showToast(`Successfully imported ${importedCount} new transactions.`, 'success');
+            } else {
+                showToast('No new valid transactions found to import.', 'info');
             }
+            e.target.value = ''; // FIX: Allow importing same file again
         };
         reader.readAsText(file);
     });
