@@ -119,7 +119,11 @@ const els = {
     okConfirmBtn: document.getElementById('okConfirmBtn'),
     
     // API State
-    apiLoadingOverlay: document.getElementById('apiLoadingOverlay')
+    apiLoadingOverlay: document.getElementById('apiLoadingOverlay'),
+    
+    // Mobile responsive
+    mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+    sidebar: document.querySelector('.sidebar')
 };
 
 // =======================
@@ -173,8 +177,29 @@ function setupEventListeners() {
             e.preventDefault();
             const targetId = link.getAttribute('data-target');
             switchTab(targetId, link);
+            
+            // Close sidebar on mobile after clicking a link
+            if (window.innerWidth <= 768 && els.sidebar && els.sidebar.classList.contains('open')) {
+                els.sidebar.classList.remove('open');
+            }
         });
     });
+    
+    // Mobile Menu
+    if (els.mobileMenuBtn && els.sidebar) {
+        els.mobileMenuBtn.addEventListener('click', () => {
+            els.sidebar.classList.toggle('open');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && els.sidebar.classList.contains('open')) {
+                if (!els.sidebar.contains(e.target) && !els.mobileMenuBtn.contains(e.target)) {
+                    els.sidebar.classList.remove('open');
+                }
+            }
+        });
+    }
 
     // Theme
     if(els.themeToggleBtn) els.themeToggleBtn.addEventListener('click', toggleTheme);
